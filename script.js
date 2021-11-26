@@ -5,8 +5,8 @@ var LANG_LIST = ['en', 'zh-hant', 'zh-hans']
 var L10N = {
 	'en': {
     selector: {
-      '#abstract-1': 'Abstract',
-      '#h-sotd': 'Status of This Document',
+      '#abstract > h2': 'Abstract',
+      '#sotd > h2': 'Status of This Document',
       '#table-of-contents': 'Table of Contents',
       '.note-title': 'Note',
     },
@@ -22,22 +22,26 @@ var L10N = {
 
   'zh-hant': {
     selector: {
-      '#abstract-1': '摘要',
-      '#h-sotd': '關於本文檔',
+      '#abstract > h2': '摘要',
+      '#sotd > h2': '關於本文檔',
       '#table-of-contents': '內容大綱',
       '.note-title': '注',
     },
 
     'fig': '圖',
 
+    'summary': '關於此文檔',
+
     dt: {
       'This version:': '本版本：',
+      'History:': '歷史：',
       'Previous version:': '上一版：',
       'Latest published version:': '最新發佈草稿：',
       'Latest editor\'s draft:': '最新編輯草稿：',
       'Editors:': '編輯：',
       'Former editors:': '原編輯：',
       'Participate:': '協助參與：',
+      'Feedback:': '反饋：',
     },
 
     dd: {
@@ -47,22 +51,26 @@ var L10N = {
 
   'zh-hans': {
     selector: {
-      '#abstract-1': '摘要',
-      '#h-sotd': '关于本文档',
+      '#abstract > h2': '摘要',
+      '#sotd > h2': '关于本文档',
       '#table-of-contents': '内容大纲',
       '.note-title': '注',
     },
 
     'fig': '图',
 
+    'summary': '关于此文档',
+
     dt: {
       'This version:': '本版本：',
+      'History:': '历史：',
       'Previous version:': '上一版：',
       'Latest published version:': '最新发布草稿：',
       'Latest editor\'s draft:': '最新编辑草稿：',
       'Editors:': '编辑：',
       'Former editors:': '原编辑：',
       'Participate:': '协助参与：',
+      'Feedback:': '反馈：',
     },
 
     dd: {
@@ -133,7 +141,18 @@ function replaceBoilerplateText(lang) {
   	Object.assign($elmt.firstChild, { textContent: l10n['fig'] })
 	})
 
-  $$('h1 + h2 + dl dt')
+  $$('body > div.head > details > summary')
+  .forEach(function($summary) {
+  	var originalText = $summary.dataset.originalText || $summary.textContent.trim()
+    var text = l10n['summary'] || originalText
+
+    if (text) {
+      $summary.textContent = text
+      $summary.dataset.originalText = originalText
+    }
+	})
+
+  $$('body > div.head > details > dl > dt')
   .forEach(function($dt) {
     var originalText = $dt.dataset.originalText || $dt.textContent.trim()
     var text = l10n.dt[originalText] || originalText
