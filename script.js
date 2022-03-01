@@ -5,8 +5,11 @@ var LANG_LIST = ['en', 'zh-hant', 'zh-hans']
 var L10N = {
 	'en': {
     selector: {
+      'head > title': 'Requirements for Chinese Text Layout',
       '#abstract > h2': 'Abstract',
+      '#toc > ol > li:nth-child(1) > a': 'Abstract',
       '#sotd > h2': 'Status of This Document',
+      '#toc > ol > li:nth-child(2) > a': 'Status of This Document',
       '#table-of-contents': 'Table of Contents',
       '.note-title': 'Note',
     },
@@ -22,8 +25,11 @@ var L10N = {
 
   'zh-hant': {
     selector: {
+      'head > title': '中文排版需求',
       '#abstract > h2': '摘要',
+      '#toc > ol > li:nth-child(1) > a': '摘要',
       '#sotd > h2': '關於本文檔',
+      '#toc > ol > li:nth-child(2) > a': '關於本文檔',
       '#table-of-contents': '內容大綱',
       '.note-title': '注',
     },
@@ -51,8 +57,11 @@ var L10N = {
 
   'zh-hans': {
     selector: {
+      'head > title': '中文排版需求',
       '#abstract > h2': '摘要',
+      '#toc > ol > li:nth-child(1) > a': '摘要',
       '#sotd > h2': '关于本文档',
+      '#toc > ol > li:nth-child(2) > a': '关于本文档',
       '#table-of-contents': '内容大纲',
       '.note-title': '注',
     },
