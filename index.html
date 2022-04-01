@@ -181,7 +181,7 @@ var respecConfig = {
     <p its-locale-filter-list="zh-hans" lang="zh-hans">每一个文化群体都拥有独自的语言、文字、书写系统。将个别书写系统在虚拟空间再现，对文化资产的承继而言，是信息传播技术的重要责任。</p>
     <p its-locale-filter-list="zh-hant" lang="zh-hant">每一個文化群體都擁有獨自的語言、文字、書寫系統。將個別書寫系統在虛擬空間再現，對文化資產的承繼而言，是資訊傳播技術的重要責任。</p>
     <p its-locale-filter-list="en" lang="en">As one of the basic work items of this task force, this document summarizes text composition requirements in the Chinese writing system. One of the goals of the task force is to describe issues for Chinese layout, another is to describe correspondences with existing standards (such as Unicode), as well as to encourage vendors to implement relevant features correctly.</p>
-    <p its-locale-filter-list="zh-hans" lang="zh-hans">作为实现这个责任的基础，本文整理了中文（汉字）书写系统在排版上的需求。一方面说明需求事项以明确描述中文排版之需求与问题；另一方面也提供与既有标准（如Unicode）的对应，冀求透过本文有效地促进实现。</p>
+    <p its-locale-filter-list="zh-hans" lang="zh-hans">作为实现这个责任的基础，本文整理了中文（汉字）书写系统在排版上的需求。一方面说明需求事项以明确描述中文排版之需求与问题；另一方面也提供与既有标准（如Unicode）的对应，冀求通过本文有效地促进实现。</p>
     <p its-locale-filter-list="zh-hant" lang="zh-hant">作為實現這個責任的基礎，本文整理了中文（漢字）書寫系統在排版上的需求。一方面說明需求事項以明確描述中文排版之需求與問題；另一方面也提供與既有標準（如Unicode）的對應，冀求透過本文有效地促進實作。</p>
   </section>
 
@@ -1253,21 +1253,66 @@ var respecConfig = {
           </ol>
         </li>
         <li id="id71">
-          <p its-locale-filter-list="en" lang="en">Arrangement of tables and/or illustrations.</p>
-          <p its-locale-filter-list="zh-hans" lang="zh-hans">表格、图片等标题栏的位置</p>
-          <p its-locale-filter-list="zh-hant" lang="zh-hant">表格、圖片等標題列的位置</p>
+          <p its-locale-filter-list="en" lang="en">Titles or captions of tables and illustrations.</p>
+          <p its-locale-filter-list="zh-hans" lang="zh-hans">图片、表格的标题或说明文字</p>
+          <p its-locale-filter-list="zh-hant" lang="zh-hant">圖片、表格的標題或說明文字</p>
           <ol>
             <li id="id72">
-              <p its-locale-filter-list="en" lang="en" class="checkme">In vertical writing mode, align the top of tables/illustrations to the right of the page but list the headers on the right side.</p>
-              <p its-locale-filter-list="zh-hans" lang="zh-hans">直排时，表格横列的标题列位上方，直行的标题列位右侧。</p>
-              <p its-locale-filter-list="zh-hant" lang="zh-hant">直排時，表格橫列的標題列位上方，直行的標題列位右側。</p>
+              <p its-locale-filter-list="en" lang="en">
+                In vertical writing mode, put the title or caption of tables or illustrations at the left or right side.
+              </p>
+              <p its-locale-filter-list="zh-hans" lang="zh-hans">直排时，图片、表格的标题或说明文字，放在图、表的左侧或右侧。</p>
+              <p its-locale-filter-list="zh-hant" lang="zh-hant">直排時，圖片、表格的標題或說明文字，放在圖、表的左側或右側。</p>
             </li>
             <li id="id73">
-              <p its-locale-filter-list="en" lang="en">In horizontal writing mode, align the top of tables/illustrations to the left of the page but list the headers on the left side.</p>
-              <p its-locale-filter-list="zh-hans" lang="zh-hans">横排时，表格横列的标题列位上方，直行的标题列位左侧。</p>
-              <p its-locale-filter-list="zh-hant" lang="zh-hant">橫排時，表格橫列的標題列位上方，直行之標題列位左側。</p>
+              <p its-locale-filter-list="en" lang="en">
+                In horizontal writing mode, put the title or caption of tables or illustrations at the top or bottom.
+              </p>
+              <p its-locale-filter-list="zh-hans" lang="zh-hans">横排时，图片、表格的标题或说明文字，放在图、表的上方或下方。</p>
+              <p its-locale-filter-list="zh-hant" lang="zh-hant">橫排時，圖片、表格的標題或說明文字，放在圖、表的上方或下方。</p>
             </li>
+            <div class="note" id="title-caption-header">
+                <p its-locale-filter-list="en" lang="en" class="checkme">
+                    The title or caption of tables refers to the text outside the table, which is different from the header row/column and header column in the table.
+                  </p>
+                  <p its-locale-filter-list="zh-hans" lang="zh-hans">标题或说明文字通常是表格之外的文本内容，与表格内的标题行、标题列不同。</p>
+                  <p its-locale-filter-list="zh-hant" lang="zh-hant" class="checkme">標題或說明文字通常是表格之外的文本內容，與表格內的標題行、標題列不同。</p>
+            </div>
           </ol>
+        </li>
+        <li id="table-header-row-column">
+            <p its-locale-filter-list="en" lang="en">Arrangement of the table header row/column.</p>
+            <p its-locale-filter-list="zh-hans" lang="zh-hans">表格标题行、标题列的位置</p>
+            <p its-locale-filter-list="zh-hant" lang="zh-hant">表格標題行、標題列的位置</p>
+            <ol>
+              <li id="table-header-row-column-vertical">
+                <p its-locale-filter-list="en" lang="en" class="checkme">
+                  In vertical writing mode, put the header row of the table on the right and the header column on the top.
+                </p>
+                <p its-locale-filter-list="zh-hans" lang="zh-hans">直排时，表格的标题行（直行）位于右侧，标题列（横列）位于上方。</p>
+                <p its-locale-filter-list="zh-hant" lang="zh-hant">直排時，表格的標題行（直行）位於右側，標題列（橫列）位於上方。</p>
+              </li>
+              <li id="table-header-row-column-horizontal">
+                <p its-locale-filter-list="en" lang="en" class="checkme">
+                    In horizontal writing mode, put the header row of the table on the top and the header column on the left.
+                  </p>
+                  <p its-locale-filter-list="zh-hans" lang="zh-hans">横排时，表格的标题行（横行）位于上方，标题列（直列）位于左侧。</p>
+                  <p its-locale-filter-list="zh-hant" lang="zh-hant">橫排時，表格的標題行（橫行）位於上方，標題列（直列）位於左側。</p>
+              </li>
+              <div class="note" id="hang-lie">
+                <p its-locale-filter-list="en" lang="en" class="checkme">
+                    In different regions, the arrangement direction of cells described by <i>row</i> (Chinese: 行 <i>háng</i>) and <i>column</i> (Chinese: 列 <i>liè</i>) in Chinese terminology may be different. For example, 行 in mainland China usually refers to a horizontal arrangement of cells, and 列 refers to a vertical arrangement of cells; while 行 in Taiwan and Hong Kong usually refers to a vertical arrangement of cells, and 列 (or 栏) refers to a horizontal arrangement of cells.
+                  </p>
+                  <p its-locale-filter-list="zh-hans" lang="zh-hans">在不同的地区，中文术语中的「行」（háng）和「列」（liè）所描述的单元格排列方向，可能是不同的。例如，中国大陆的「行」通常指一组水平排列的单元格，「列」指一组垂直排列的单元格；而台湾、香港地区的「行」通常指一组垂直排列的单元格，「列」（或「栏」）指一组水平排列的单元格。</p>
+                  <p its-locale-filter-list="zh-hant" lang="zh-hant" class="checkme">在不同的地區，中文術語中的「行」（háng）和「列」（liè）所描述的單元格排列方向，可能是不同的。例如，中國大陸的「行」通常指一組水平排列的單元格，「列」指一組垂直排列的單元格；而臺灣、香港地區的「行」通常指一組垂直排列的單元格，「列」（或「欄」）指一組水平排列的單元格。</p>
+
+                  <p its-locale-filter-list="en" lang="en" class="checkme">
+                    This document uses row/column in logical directions consistently, i.e., "row" is vertical in vertical writing mode and horizontal in horizontal writing mode, and "column" is horizontal in vertical writing mode and vertical in horizontal writing mode.
+                  </p>
+                  <p its-locale-filter-list="zh-hans" lang="zh-hans">本文档采用「逻辑行」「逻辑列」来统一表述，也即，「行」在直排模式下垂直、在横排模式下水平，「列」在直排模式下水平、在横排模式下垂直。</p>
+                  <p its-locale-filter-list="zh-hant" lang="zh-hant" class="checkme">本文檔采用「邏輯行」「邏輯列」來統一表述，也即，「行」在直排模式下垂直、在橫排模式下水平，「列」在直排模式下水平、在橫排模式下垂直。</p>
+               </div>
+            </ol>
         </li>
         <li id="id74">
           <p its-locale-filter-list="en" lang="en">Arrangement of an incomplete number of lines on a multi-column format page due to new recto, page break, or other reason.</p>
@@ -1410,7 +1455,7 @@ var respecConfig = {
 
             <div class="note" id="n022">
               <p its-locale-filter-list="en" lang="en">There are vertical bracket codepoints such as <span class="uname" translate="no">U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET</span> in Unicode. But they are not suitable for authors to use directly. They should be replaced via some other mechanism.</p>
-              <p its-locale-filter-list="zh-hans" lang="zh-hans">Unicode编码中有如<span class="uname" translate="no">U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET</span>等直立的符号，但作者不适宜直接使用该符号，而是透过其他机制替代使用。</p>
+              <p its-locale-filter-list="zh-hans" lang="zh-hans">Unicode编码中有如<span class="uname" translate="no">U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET</span>等直立的符号，但作者不适宜直接使用该符号，而是通过其他机制替代使用。</p>
               <p its-locale-filter-list="zh-hant" lang="zh-hant">Unicode編碼中有如<span class="uname" translate="no">U+FE41 PRESENTATION FORM FOR VERTICAL LEFT CORNER BRACKET</span>等直立的符號，但作者不適宜直接使用該符號，而是透過其他機制替代使用。</p>
       </div>
 
@@ -1665,7 +1710,7 @@ var respecConfig = {
         <p its-locale-filter-list="zh-hant" lang="zh-hant">排版上，《標點符號用法》規定問號與嘆號連用時，佔一個字位置；兩個問號或嘆號疊用時，佔一個字位置；三個問號或嘆號疊用時，佔兩個字位置。此外，在台灣直排的習慣中，嘆問號連用與問號、嘆號疊用時，符號多直立，並且佔一個字的位置。</p>
         <div class="note">
           <p its-locale-filter-list="en" lang="en">The following punctuation marks already exist in Unicode: U+2047 DOUBLE QUESTION MARK [⁇]、U+203C DOUBLE EXCLAMATION MARK [‼ ]、U+2048 QUESTION EXCLAMATION MARK [⁈]、U+2049 EXCLAMATION QUESTION MARK [⁉]. They should be used with discretion.</p>
-          <p its-locale-filter-list="zh-hans" lang="zh-hans">在Unicode中已编有U+2047 DOUBLE QUESTION MARK [⁇]、U+203C DOUBLE EXCLAMATION MARK [‼ ]、U+2048 QUESTION EXCLAMATION MARK [⁈]、U+2049 EXCLAMATION QUESTION MARK [⁉]等符号，在考量字体支援下可斟酌使用。</p>
+          <p its-locale-filter-list="zh-hans" lang="zh-hans">在Unicode中已编有U+2047 DOUBLE QUESTION MARK [⁇]、U+203C DOUBLE EXCLAMATION MARK [‼ ]、U+2048 QUESTION EXCLAMATION MARK [⁈]、U+2049 EXCLAMATION QUESTION MARK [⁉]等符号，在考量字体支持下可斟酌使用。</p>
           <p its-locale-filter-list="zh-hant" lang="zh-hant">在Unicode中已編有U+2047 DOUBLE QUESTION MARK [⁇]、U+203C DOUBLE EXCLAMATION MARK [‼]、U+2048 QUESTION EXCLAMATION MARK [⁈]、U+2049 EXCLAMATION QUESTION MARK [⁉]等符號，在考量字體支援下可斟酌使用。</p>
         </div>
       </section>
@@ -2821,7 +2866,7 @@ var respecConfig = {
       <p its-locale-filter-list="zh-hant" lang="zh-hant">除縮排外，也有首行不縮排、次行起至末行縮排的狀況，稱為凸排。例如劇本中的對白，首行以人名開頭不縮排，第二行起縮排。編號列表、問答、法律條文等也使用此種方式處理。雖稱為凸排，但首行開始處不超過版心所設定的範圍。</p>
       <p its-locale-filter-list="en" lang="en">When the tupai [<span lang="zh-hant">凸排</span>] or itemization method is used, the indent of the second line and the rest usually takes a fixed amount of space such as three characters plus one colon which takes four-character space. When the name of a person is less than three characters, a certain amount of space should be inserted between the characters so as to keep the same width as four.</p>
       <p its-locale-filter-list="zh-hans" lang="zh-hans" class="checkme">凸排时，次行起缩排通常为固定量的空白，例如人名三个字加冒号共四字，凡遇对话时次行皆缩排四个全角空白。当人名少于三个字时，则在姓与名间加入空白，以保持体例一致。</p>
-      <p its-locale-filter-list="zh-hant" lang="zh-hant">凸排時，次行起縮排通常為固定量的空白，例如人名三字加冒號共四字，凡遇對話時次行皆縮排四個全型空白。遇人名少於三字時，則於姓與名間加入空白，以保持體例一致。</p>
+      <p its-locale-filter-list="zh-hant" lang="zh-hant">凸排時，次行起縮排通常為固定量的空白，例如人名三字加冒號共四字，凡遇對話時次行皆縮排四個全形空白。遇人名少於三字時，則於姓與名間加入空白，以保持體例一致。</p>
     </section>
 
 
@@ -3212,7 +3257,7 @@ var respecConfig = {
               行末的句号，在日文排版中往往不进行挤压处理。但是对于中文排版，一般要进行处理，这对于中国大陆的排版规范尤其重要。《标点符号用法》（GB/T 15834—2011）有明确规定「5.1.10 标点符号排在一行末尾时，若为全角字符则应占半角字符的宽度（即半个字位置），以使视觉效果更美观。」
             </p>
             <p its-locale-filter-list="zh-hant" lang="zh-hant" class="checkme">
-              行末的句號，在日文排版中往往不進行擠壓處理。但是對於中文排版，一般要進行處理，這對於中國大陸的排版規範尤其重要。《標點符號用法》（GB/T 15834—2011）有明確規定「5.1.10 標點符號排在一行末尾時，若為全角字符則應占半角字符的寬度（即半個字位置），以使視覺效果更美觀。」
+              行末的句號，在日文排版中往往不進行擠壓處理。但是對於中文排版，一般要進行處理，這對於中國大陸的排版規範尤其重要。《標點符號用法》（GB/T 15834—2011）有明確規定「5.1.10 標點符號排在一行末尾時，若為全形字符則應占半形字符的寬度（即半個字位置），以使視覺效果更美觀。」
             </p>
           </aside>
         </li>
@@ -3673,18 +3718,18 @@ var respecConfig = {
         <tr>
           <th class="name">
             <span its-locale-filter-list="en" lang="en">Name (TC)</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（繁）</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">名称（繁）</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（繁）</span>
           </th>
           <th class="name">
             <span its-locale-filter-list="en" lang="en">Name (SC)</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（簡）</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">名称（简）</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（簡）</span>
           </th>
           <th class="character">
             <span its-locale-filter-list="en" lang="en">Character</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">字符</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
           </th>
           <th class="unicode">
             <span its-locale-filter-list="en" lang="en">Unicode</span>
@@ -3693,13 +3738,13 @@ var respecConfig = {
           </th>
           <th class="unicode-name">
             <span its-locale-filter-list="en" lang="en">Name</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">Unicode名称</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
           </th>
           <th>
             <span its-locale-filter-list="en" lang="en">Note</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">注</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">注</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">注</span>
           </th>
         </tr>
       </thead>
@@ -3819,18 +3864,18 @@ var respecConfig = {
         <tr>
           <th class="name">
             <span its-locale-filter-list="en" lang="en">Name (TC)</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（繁）</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">名称（繁）</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（繁）</span>
           </th>
           <th class="name">
             <span its-locale-filter-list="en" lang="en">Name (SC)</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（簡）</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">名称（简）</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（簡）</span>
           </th>
           <th class="character">
             <span its-locale-filter-list="en" lang="en">Character</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">字符</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
           </th>
           <th class="unicode">
             <span its-locale-filter-list="en" lang="en">Unicode</span>
@@ -3839,13 +3884,13 @@ var respecConfig = {
           </th>
           <th class="unicode-name">
             <span its-locale-filter-list="en" lang="en">Name</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">Unicode名称</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
           </th>
           <th>
             <span its-locale-filter-list="en" lang="en">Note</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">注</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">注</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">注</span>
           </th>
         </tr>
       </thead>
@@ -3973,18 +4018,18 @@ var respecConfig = {
         <tr>
           <th class="name">
             <span its-locale-filter-list="en" lang="en">Name (TC)</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（繁）</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">名称（繁）</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（繁）</span>
           </th>
           <th class="name">
             <span its-locale-filter-list="en" lang="en">Name (SC)</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（簡）</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">名称（简）</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（簡）</span>
           </th>
           <th class="character">
             <span its-locale-filter-list="en" lang="en">Character</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">字符</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
           </th>
           <th class="unicode">
             <span its-locale-filter-list="en" lang="en">Unicode</span>
@@ -3993,13 +4038,13 @@ var respecConfig = {
           </th>
           <th class="unicode-name">
             <span its-locale-filter-list="en" lang="en">Name</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">Unicode名称</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
           </th>
           <th>
             <span its-locale-filter-list="en" lang="en">Note</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">注</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">注</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">注</span>
           </th>
         </tr>
       </thead>
@@ -4172,18 +4217,18 @@ var respecConfig = {
         <tr>
           <th class="name">
             <span its-locale-filter-list="en" lang="en">Name (TC)</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（繁）</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">名称（繁）</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（繁）</span>
           </th>
           <th class="name">
             <span its-locale-filter-list="en" lang="en">Name (SC)</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（簡）</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">名称（简）</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">名稱（簡）</span>
           </th>
           <th class="character">
             <span its-locale-filter-list="en" lang="en">Character</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">字符</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
           </th>
           <th class="unicode">
             <span its-locale-filter-list="en" lang="en">Unicode</span>
@@ -4192,8 +4237,8 @@ var respecConfig = {
           </th>
           <th class="unicode-name">
             <span its-locale-filter-list="en" lang="en">Name</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">Unicode名称</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
           </th>
         </tr>
       </thead>
@@ -4249,8 +4294,8 @@ var respecConfig = {
         <tr>
           <th class="character">
             <span its-locale-filter-list="en" lang="en">Character</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">字符</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">字符</span>
           </th>
           <th class="unicode">
             <span its-locale-filter-list="en" lang="en">Unicode</span>
@@ -4259,18 +4304,18 @@ var respecConfig = {
           </th>
           <th class="unicode-name">
             <span its-locale-filter-list="en" lang="en">Name</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">Unicode名称</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">Unicode名稱</span>
           </th>
           <th class="true-or-false">
             <span its-locale-filter-list="en" lang="en">Unbreakable</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">不可分離</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">不可分离</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">不可分離</span>
           </th>
           <th class="true-or-false">
             <span its-locale-filter-list="en" lang="en">Rotated 90° clockwise in vertical writing mode</span>
-            <span its-locale-filter-list="zh-hant" lang="zh-hant">直排時右旋90°</span>
             <span its-locale-filter-list="zh-hans" lang="zh-hans">直排时右旋90°</span>
+            <span its-locale-filter-list="zh-hant" lang="zh-hant">直排時右旋90°</span>
           </th>
         </tr>
       </thead>
@@ -4712,7 +4757,7 @@ var respecConfig = {
             <li id="id206">A square character frame that has a character advance of 1/2 character size.
           </ol>
           <p its-locale-filter-list="zh-hans" lang="zh-hans">排字的度量单位，宽度等于同样字号全角的一半。</p>
-          <p its-locale-filter-list="zh-hant" lang="zh-hant">排字的度量單位，寬度等於同樣字號全角的一半。</p>
+          <p its-locale-filter-list="zh-hant" lang="zh-hant">排字的度量單位，寬度等於同樣字號全形的一半。</p>
         </td>
       </tr>
       <tr id="term.punctuation-marks">
@@ -5571,8 +5616,9 @@ var respecConfig = {
     <li>《标点符号用法》— General Rules for Punctuation (GB/T 15834—2011)</li>
     <li>《出版物上数字用法》— General Rules for writing numerals in public texts (GB/T 15835—2011)</li>
     <li>《國語注音符號手冊》— The Handbook of Mandarin Phonetic Symbols</li>
-    <li>《汉语拼音正词法基本规则》— Basic Rules for Chinese Phonetic Alphabet Orthography（GB/T 16159—2012）</li>
-    <li>《党政机关公文格式》— Layout key for official document of Party and government organs（GB/T 9704—2012）</li>
+    <li>《汉语拼音正词法基本规则》— Basic Rules for Chinese Phonetic Alphabet Orthography (GB/T 16159—2012)</li>
+    <li>《党政机关公文格式》— Layout key for official document of Party and government organs (GB/T 9704—2012)</li>
+    <li><a href="https://www.unicode.org/versions/latest/">The Unicode Standard</a></li>
   </ul>
 </section>
 
@@ -5606,7 +5652,7 @@ var respecConfig = {
   <p its-locale-filter-list="en" lang="en">Special thanks  to the following people who contributed to this document (contributors' names listed in in alphabetic order). </p>
   <p its-locale-filter-list="zh-hans" lang="zh-hans">感谢以下参与者对本文档的建议与补充（依字母及拼音顺序排列）：</p>
   <p its-locale-filter-list="zh-hant" lang="zh-hant">感謝以下參與者對本文檔的建議與補充（依字母及拼音順序排列）：</p>
-  <p class="acknowledgement">Addison Phillips, Buernia, 陳穎青, Du Yuang, Hao Chen, Hawkeyes Wind, 贺师俊 John Hax (百姓网), 侯迈 MieMie (豆瓣), Jiang Jiang (Opera), 吕康豪 Kang-hao Lu (BGI), 李喆明 Austin Lee, 权循真 Xidorn Quan (Mozilla), SyaoranHinata, technommy, Virgil Ming, and Zhengyu Qian.</p>
+  <p class="acknowledgement">Addison Phillips, Buernia, 陳穎青, Du Yuang, Hao Chen, Hawkeyes Wind, 贺师俊 John Hax (百姓网), 侯迈 MieMie (豆瓣), NFSL2001, Jiang Jiang (Opera), 吕康豪 Kang-hao Lu (BGI), 李喆明 Austin Lee, Percy Ma, 权循真 Xidorn Quan (Mozilla), SyaoranHinata, technommy, Virgil Ming, and Zhengyu Qian.</p>
   <p its-locale-filter-list="en" lang="en">Please find the latest info of the contributors at the <a href="https://github.com/w3c/clreq/graphs/contributors">GitHub contributors list</a>.</p>
   <p its-locale-filter-list="zh-hans" lang="zh-hans">欲了解最新的参与者信息，请参看<a href="https://github.com/w3c/clreq/graphs/contributors">GitHub贡献者列表</a>。</p>
   <p its-locale-filter-list="zh-hant" lang="zh-hant">欲了解最新的參與者信息，請參看<a href="https://github.com/w3c/clreq/graphs/contributors">GitHub貢獻者列表</a>。</p>
